@@ -145,9 +145,10 @@ do
             	sudo echo "up route add -net 172.26.0.0/16 gw 10.$NET1.$ROUTE1.1" >> $IFACE
             	sudo echo "up route add -net 172.30.0.0/16 gw 10.$NET1.$ROUTE1.1" >> $IFACE                
             	sudo echo "up route add -net 10.0.0.0/8 gw 10.$NET1.$ROUTE1.1" >> $IFACE
-		sudo echo "up route add -net 10.97.250.0/24 gw 10.$NET1.$ROUTE1.0" >> $IFACE
-		sudo echo "up route add -net 10.97.252.0/24 gw 10.$NET1.$ROUTE1.0" >> $IFACE
-		sudo echo "up route add -net 10.97.254.0/24 gw 10.$NET1.$ROUTE1.0" >> $IFACE
+		sudo echo "up route add -net 172.16.0.0/16 gw 10.NET1.$ROUTE1.1" >> $IFACE
+		sudo echo "up route add -net 10.97.250.0/24 gw 10.$NET1.$ROUTE0.1" >> $IFACE
+		sudo echo "up route add -net 10.97.252.0/24 gw 10.$NET1.$ROUTE0.1" >> $IFACE
+		sudo echo "up route add -net 10.97.254.0/24 gw 10.$NET1.$ROUTE0.1" >> $IFACE
 	
 	elif [ "$OS" = "CentOS" ]
    	then
