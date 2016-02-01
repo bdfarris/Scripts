@@ -6,7 +6,7 @@ RESTART="/path-to-start-script"
 PGREP="/usr/bin/pgrep -f"
 PROCESS="processname-beware if multiple processes with name"
 #MAIL="/usr/bin/mailx"
-#ADDRESS="bfarris@spireon.com"
+#ADDRESS="email@address.com"
 
 # find ssh tunnel pid
 $PGREP "${PROCESS}"
