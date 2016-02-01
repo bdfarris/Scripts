@@ -36,7 +36,7 @@ usage() {
    echo "-K : Specify path to key file to be appended to authorized keys"
    echo ""
    echo "Example: "
-   echo "pushkey.sh -O ubuntu -I /Users/bfarris/.ssh/v2root.pem -S /Users/bfarris/ubuntuservers -K /Users/bfarris/keys2add"
+   echo "pushkey.sh -O ubuntu -I /Users/<username>/.ssh/v2root.pem -S /Users/<username>/ubuntuservers -K /Users/<username>/keys2add"
    exit 1
 }
 
@@ -55,7 +55,7 @@ push() {
 		for host in `cat $SERVERLIST`
 		do
 
-			cat $KEY | /usr/bin/ssh -i $SSHIDENT $SSHUSER@$host "sudo tee -a /home/procon/.ssh/authorized_keys"
+			cat $KEY | /usr/bin/ssh -i $SSHIDENT $SSHUSER@$host "sudo tee -a /home/<user>/.ssh/authorized_keys"
 
 		done
 
@@ -65,7 +65,7 @@ push() {
 		for host in `cat $SERVERLIST`
 		do
 
-			cat $KEY | /usr/bin/ssh -i $SSHIDENT $SSHUSER@$host "tee -a /home/procon/.ssh/authorized_keys"
+			cat $KEY | /usr/bin/ssh -i $SSHIDENT $SSHUSER@$host "tee -a /home/<user>/.ssh/authorized_keys"
 
 		done
 
